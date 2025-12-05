@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JOIHAN - Soft Profile</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body { 
+            margin: 0; font-family: 'Pretendard', sans-serif; 
+            background: url('profile2.jpg') no-repeat center center fixed; 
+            background-size: cover;
+            display: flex; align-items: center; justify-content: center; height: 100vh;
+        }
+
+        .glass-box {
+            background: rgba(255, 255, 255, 0.9);
+            width: 80%; max-width: 900px; height: 85vh;
+            border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: flex; overflow: hidden;
+        }
+
+        .side-photo {
+            width: 40%; background: #eee;
+            display: flex; flex-direction: column;
+        }
+        .side-photo img { flex: 1; object-fit: cover; width: 100%; border-bottom: 2px solid white; }
+
+        .main-content {
+            width: 60%; padding: 40px; overflow-y: auto;
+        }
+
+        h1 { color: #57606f; font-size: 36px; margin-bottom: 5px; }
+        .sub-text { color: #a4b0be; font-size: 14px; margin-bottom: 30px; }
+
+        .highlight { color: #ffa502; font-weight: bold; }
+        
+        .profile-detail { 
+            background: #f1f2f6; padding: 15px; border-radius: 10px; 
+            font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 25px;
+        }
+
+        .works h3 { font-size: 16px; color: #2f3542; border-bottom: 2px solid #dfe4ea; padding-bottom: 10px; }
+        .works ul { padding-left: 20px; font-size: 13px; color: #57606f; }
+        .works li { margin-bottom: 5px; }
+
+        .footer { margin-top: 30px; font-size: 13px; color: #747d8c; text-align: right; }
+    </style>
+</head>
+<body>
+    <div class="glass-box">
+        <div class="side-photo">
+            <img src="screen3.jpg" alt="Screen3">
+            <img src="screen2.png" alt="Screen2">
+            <img src="screen4.png" alt="Screen4">
+        </div>
+        <div class="main-content">
+            <h1>조이한 <span style="font-size:18px; font-weight:300;">JOIHAN</span></h1>
+            <div class="sub-text">Bright & Energetic Actor</div>
+
+            <div class="profile-detail">
+                <b>2019. 03. 26</b> (7세)<br>
+                Height: <b>125cm</b> / Weight: <b>25kg</b><br>
+                Specialty: 축구, 수영, 댄스, 피아노<br>
+                Location: 경기도 용인
+            </div>
+
+            <div class="works">
+                <h3>주요 경력</h3>
+                <ul>
+                    <li><b>[드라마]</b> 얄미운사랑, 천천히강렬하게, 친절한선주씨, 아이쇼핑</li>
+                    <li><b>[영화]</b> 그래, 그게 진짜 모이는거지 (29초 영화제)</li>
+                    <li><b>[광고]</b> 현대자동차 아이오닉9 (2025)</li>
+                    <li><b>[광고]</b> GS홈쇼핑 신일 에어서큘레이터 (2025)</li>
+                    <li><b>[광고]</b> LG틔운 X 초록우산 (2024)</li>
+                    <li><b>[광고]</b> 삼성전자 케어플러스, 엘리하이키즈, 한샘몰 (2023)</li>
+                    <li><b>[모델]</b> 베베드피노, 아이스크림홈런, 키즈몽드</li>
+                </ul>
+            </div>
+
+            <div class="footer">
+                <i class="fas fa-phone"></i> 010-5542-0303<br>
+                Instagram @kjandjy
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JOIHAN - Cinematic Profile</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body { margin: 0; padding: 0; font-family: 'Pretendard', sans-serif; color: white; overflow-x: hidden; }
+        
+        /* 메인 배경 설정 (profile4.jpg 권장 - 정면 클로즈업) */
+        .background {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: url('profile3.jpg') no-repeat center center/cover;
+            z-index: -1;
+        }
+        /* 인물을 돋보이게 하기 위한 그라디언트 오버레이 */
+        .overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.1) 100%);
+            z-index: -1;
+        }
+
+        .container {
+            width: 90%; max-width: 1200px; margin: 0 auto;
+            padding: 50px 0; display: flex; flex-direction: column; justify-content: center; min-height: 100vh;
+        }
+
+        .header h1 { font-size: 80px; margin: 0; line-height: 1; letter-spacing: -2px; }
+        .header h2 { font-size: 30px; margin: 10px 0 30px; font-weight: 300; opacity: 0.8; }
+        .info-bar { display: flex; gap: 30px; font-size: 18px; margin-bottom: 50px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 20px; }
+        
+        .content-grid { display: flex; gap: 50px; }
+        .career-list { flex: 1; }
+        .career-category { font-size: 24px; font-weight: bold; color: #f1c40f; margin-bottom: 15px; border-bottom: 2px solid #f1c40f; display: inline-block; }
+        .career-item { margin-bottom: 10px; font-size: 16px; opacity: 0.9; }
+        .career-item span { font-weight: 300; color: #ccc; margin-right: 10px; }
+
+        /* 활기찬 서브 사진 영역 */
+        .photo-gallery { 
+            flex: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; 
+        }
+        .photo-item { 
+            width: 100%; height: 150px; object-fit: cover; border-radius: 10px; 
+            transition: transform 0.3s; border: 2px solid rgba(255,255,255,0.2);
+        }
+        .photo-item:hover { transform: scale(1.05) rotate(2deg); z-index: 10; border-color: #f1c40f; }
+
+        @media print {
+            .background { position: absolute; -webkit-print-color-adjust: exact; }
+            .overlay { background: rgba(0,0,0,0.7); } 
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="header">
+            <h1>JOIHAN</h1>
+            <h2>조이한</h2>
+            <div class="info-bar">
+                <span>2019. 03. 26 (7세)</span>
+                <span>125cm / 25kg</span>
+                <span>특기: 축구, 수영, 댄스, 피아노</span>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="career-list">
+                <div class="career-category">DRAMA</div>
+                <div class="career-item">TVN 얄미운사랑</div>
+                <div class="career-item">Netflix 천천히강렬하게</div>
+                <div class="career-item">MBC 친절한 선주씨</div>
+                <div class="career-item">ENA 아이쇼핑</div>
+
+                <div class="career-category" style="margin-top:20px;">MOVIE</div>
+                <div class="career-item"><span>2025</span>그래, 그게 진짜 모이는거지 (29초영화제)</div>
+
+                <div class="career-category" style="margin-top:20px;">COMMERCIAL</div>
+                <div class="career-item"><span>2025</span>현대자동차 아이오닉9</div>
+                <div class="career-item"><span>2025</span>GS홈쇼핑 신일 에어서큘레이터</div>
+                <div class="career-item"><span>2024</span>LG틔운 X 초록우산</div>
+                <div class="career-item"><span>2023</span>삼성전자 케어플러스 / 엘리하이키즈</div>
+            </div>
+
+            <div class="photo-gallery">
+                <img src="screen4.png" class="photo-item">
+                <img src="screen1.png" class="photo-item">
+                <img src="screen2.png" class="photo-item">
+				<img src="screen3.jpg" class="photo-item">
+				<img src="screen5.png" class="photo-item">
+				<img src="screen5.jpg" class="photo-item">
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px; font-size: 14px; opacity: 0.7;">
+            CONTACT: 010-5542-0303 | INSTAGRAM: @kjandjy | 용인 거주 (자차 이동 가능)
+        </div>
+    </div>
+</body>
+</html>

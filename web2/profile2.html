@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JOIHAN - Vivid Profile</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body { 
+            margin: 0; padding: 40px; font-family: 'Pretendard', sans-serif; 
+            background: url('profile3.jpg') no-repeat center center fixed; 
+            background-size: cover;
+        }
+        /* 배경 이미지를 흐릿하게 처리하여 컨텐츠 강조 */
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.85); z-index: -1;
+            backdrop-filter: blur(5px);
+        }
+
+        .card {
+            background: white; max-width: 1000px; margin: 0 auto;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2); border-radius: 30px; overflow: hidden;
+            display: flex; position: relative;
+        }
+
+        .left-visual {
+            width: 45%; position: relative;
+        }
+        .main-img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .name-badge {
+            position: absolute; bottom: 30px; left: -20px;
+            background: #ff5e57; color: white; padding: 15px 40px;
+            font-size: 40px; font-weight: 900; transform: rotate(-5deg);
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .right-content {
+            width: 55%; padding: 40px;
+        }
+
+        .scrolling-photos {
+            display: flex; gap: 10px; overflow-x: auto; padding-bottom: 15px; margin-bottom: 20px;
+        }
+        .scrolling-photos img {
+            width: 100px; height: 100px; border-radius: 50%; object-fit: cover;
+            border: 3px solid #ffdd59; flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: 18px; font-weight: 800; color: #2c3e50; 
+            border-left: 5px solid #ff5e57; padding-left: 10px; margin: 20px 0 10px;
+        }
+
+        .specs {
+            display: flex; gap: 15px; font-weight: bold; color: #555; background: #f1f2f6;
+            padding: 15px; border-radius: 10px; margin-bottom: 20px;
+        }
+
+        .career-table {
+            width: 100%; border-collapse: collapse; font-size: 14px;
+        }
+        .career-table td { padding: 6px 0; border-bottom: 1px solid #eee; }
+        .year { color: #ff5e57; font-weight: bold; margin-right: 5px; }
+
+        .contact-box {
+            background: #2c3e50; color: white; padding: 20px; border-radius: 15px;
+            margin-top: 30px; text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="left-visual">
+            <img src="profile2.jpg" class="main-img">
+            <div class="name-badge">JOIHAN</div>
+        </div>
+        <div class="right-content">
+            <div class="scrolling-photos">
+                <img src="screen2.png">
+                <img src="screen3.jpg">
+                <img src="screen4.png">
+                <img src="profile1.jpg">
+            </div>
+
+            <div class="specs">
+                <div>19.03.26 (7세)</div>
+                <div>125cm</div>
+                <div>25kg</div>
+            </div>
+
+            <div class="section-title">FILMOGRAPHY</div>
+            <table class="career-table">
+                <tr><td>[드라마] 얄미운사랑 (TVN)</td></tr>
+                <tr><td>[드라마] 천천히강렬하게 (Netflix)</td></tr>
+                <tr><td>[드라마] 친절한 선주씨 (MBC)</td></tr>
+                <tr><td><span class="year">2025</span>현대자동차 아이오닉9 광고</td></tr>
+                <tr><td><span class="year">2025</span>GS홈쇼핑 신일 에어서큘레이터</td></tr>
+                <tr><td><span class="year">2024</span>LG틔운 X 초록우산</td></tr>
+                <tr><td><span class="year">2023</span>삼성전자 케어플러스</td></tr>
+                <tr><td><span class="year">2023</span>엘리하이키즈 / 한샘몰 / 베베드피노</td></tr>
+            </table>
+
+            <div class="section-title">SKILLS</div>
+            <div style="color:#666;">#축구 #수영 #댄스 #피아노 #표정부자</div>
+
+            <div class="contact-box">
+                CASTING: 010-5542-0303<br>
+                Insta: @kjandjy
+            </div>
+        </div>
+    </div>
+</body>
+</html>

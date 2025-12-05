@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JOIHAN - Modern Profile</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body { margin: 0; font-family: 'Pretendard', sans-serif; display: flex; height: 100vh; overflow: hidden; }
+
+        /* 좌측: 메인 배경 이미지 영역 */
+        .left-panel {
+            flex: 1; 
+            background: url('profile1.jpg') no-repeat center center/cover;
+            position: relative;
+        }
+        /* 이름 오버레이 */
+        .name-overlay {
+            position: absolute; bottom: 50px; left: 50px;
+            color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        .name-en { font-size: 60px; font-weight: 900; line-height: 1; }
+        .name-ko { font-size: 30px; font-weight: 300; margin-top: 10px; }
+
+        /* 우측: 정보 및 서브 사진 영역 */
+        .right-panel {
+            width: 500px; background: white; padding: 50px 40px; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+
+        .profile-header {
+            border-bottom: 2px solid #000; padding-bottom: 20px; margin-bottom: 30px;
+        }
+        .info-row { display: flex; justify-content: space-between; margin-bottom: 8px; color: #333; font-size: 15px; }
+        .label { font-weight: 700; color: #000; }
+
+        .sub-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 30px;
+        }
+        .sub-img { width: 100%; height: 120px; object-fit: cover; background: #eee; }
+
+        .list-title { font-size: 14px; font-weight: 900; color: #000; margin: 20px 0 10px; letter-spacing: 1px; }
+        .work-item { font-size: 13px; color: #555; margin-bottom: 6px; border-left: 2px solid #ddd; padding-left: 10px; }
+        
+        .contact { background: #f9f9f9; padding: 20px; margin-top: auto; font-size: 12px; text-align: center; color: #777; }
+    </style>
+</head>
+<body>
+    <div class="left-panel">
+        <div class="name-overlay">
+            <div class="name-en">JOIHAN</div>
+            <div class="name-ko">조이한 (2019)</div>
+        </div>
+    </div>
+    
+    <div class="right-panel">
+        <div class="profile-header">
+            <div class="info-row"><span class="label">Height</span> <span>125cm</span></div>
+            <div class="info-row"><span class="label">Weight</span> <span>25kg</span></div>
+            <div class="info-row"><span class="label">Skills</span> <span>Soccer, Swimming, Dance</span></div>
+            <div class="info-row"><span class="label">Location</span> <span>Yongin, Gyeonggi-do</span></div>
+        </div>
+
+        <div class="sub-grid">
+            <img src="screen1.png" class="sub-img">
+            <img src="screen2.png" class="sub-img">
+            <img src="screen4.png" class="sub-img">
+            <img src="profile3.jpg" class="sub-img">
+        </div>
+
+        <div class="list-title">DRAMA & MOVIE</div>
+        <div class="work-item">TVN 얄미운사랑</div>
+        <div class="work-item">Netflix 천천히강렬하게</div>
+        <div class="work-item">MBC 친절한 선주씨</div>
+        <div class="work-item">ENA 아이쇼핑</div>
+        <div class="work-item">2025 그래, 그게 진짜 모이는거지 (29초영화제)</div>
+
+        <div class="list-title">ADVERTISEMENT</div>
+        <div class="work-item">2025 현대자동차 아이오닉9</div>
+        <div class="work-item">2025 GS홈쇼핑 신일 에어서큘레이터</div>
+        <div class="work-item">2025 성남 수정도서관 홍보</div>
+        <div class="work-item">2024 명지전문대학 홍보</div>
+        <div class="work-item">2023 현대건설 / 삼성전자 / 한샘몰</div>
+
+        <div class="contact">
+            Mobile. 010-5542-0303<br>
+            www.instagram.com/kjandjy
+        </div>
+    </div>
+</body>
+</html>

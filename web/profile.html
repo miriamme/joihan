@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actor Profile - JOIHAN</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #7f8c8d;
+            --bg-color: #ffffff;
+            --text-color: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Pretendard', sans-serif;
+            -webkit-print-color-adjust: exact;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Left Column - Image Area */
+        .left-col {
+            width: 45%;
+            background-color: #f0f2f5;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-photo {
+            width: 100%;
+            height: 65%;
+            object-fit: cover;
+            background-color: #ddd; /* 이미지 로드 실패 시 배경 */
+        }
+
+        .sub-photos {
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sub-photo-item {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            border-top: 2px solid white;
+        }
+
+        /* Right Column - Info Area */
+        .right-col {
+            width: 55%;
+            padding: 40px 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Header Info */
+        .header {
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+        }
+
+        .name-ko {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .name-en {
+            font-size: 18px;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        .personal-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 14px;
+            color: var(--text-color);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .info-item b {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* Career Section */
+        .career-section {
+            flex-grow: 1;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--primary-color);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .career-list {
+            list-style: none;
+            font-size: 13px;
+        }
+
+        .career-item {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .career-title {
+            font-weight: 600;
+            color: #444;
+        }
+
+        .career-role {
+            color: #888;
+            font-size: 12px;
+            text-align: right;
+        }
+
+        .year-badge {
+            display: inline-block;
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            margin-right: 6px;
+            font-weight: 700;
+            color: #555;
+        }
+
+        /* Skills & Contact */
+        .bottom-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .skill-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Print Settings */
+        @media print {
+            body { 
+                padding: 0; 
+                background: white; 
+            }
+            .a4-page { 
+                box-shadow: none; 
+                width: 100%;
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="a4-page">
+        <div class="left-col">
+            <img src="main.jpg" class="main-photo" alt="메인 프로필 사진">
+            
+            <div class="sub-photos">
+                <img src="sub1.png" class="sub-photo-item" alt="서브 사진 1">
+                <img src="sub2.jpg" class="sub-photo-item" alt="서브 사진 2">
+            </div>
+        </div>
+
+        <div class="right-col">
+            
+            <div class="header">
+                <div class="name-ko">조이한</div>
+                <div class="name-en">JOIHAN</div>
+                
+                <div class="personal-info">
+                    <div class="info-item"><b>BIRTH</b> 2019. 03. 26 (7세)</div>
+                    <div class="info-item"><b>BODY</b> 125cm / 25kg</div>
+                </div>
+            </div>
+
+            <div class="career-section">
+                
+                <div class="section-title">DRAMA</div>
+                <ul class="career-list">
+                    <li class="career-item"><span class="career-title">TVN 얄미운사랑</span></li>
+                    <li class="career-item"><span class="career-title">Netflix 천천히강렬하게</span></li>
+                    <li class="career-item"><span class="career-title">MBC 친절한 선주씨</span></li>
+                    <li class="career-item"><span class="career-title">ENA 아이쇼핑</span></li>
+                </ul>
+
+                <div class="section-title">MOVIE</div>
+                <ul class="career-list">
+                    <li class="career-item">
+                        <span class="career-title"><span class="year-badge">2025</span>그래, 그게 진짜 모이는거지</span>
+                        <span class="career-role">29초영화제</span>
+                    </li>
+                </ul>
+
+                <div class="section-title">ADVERTISEMENT & MODEL</div>
+                <ul class="career-list">
+                    <li class="career-item">
+                        <span class="career-title"><span class="year-badge">2025</span>현대자동차 아이오닉9</span>
+                        <span class="career-role">광고</span>
+                    </li>
+                    <li class="career-item">
+                        <span class="career-title"><span class="year-badge">2025</span>GS홈쇼핑 신일 에어서큘레이터</span>
+                        <span class="career-role">방송</span>
+                    </li>
+                    <li class="career-item">
+                        <span class="career-title"><span class="year-badge">2025</span>성남 수정도서관 홍보영상</span>
+                        <span class="career-role">홍보</span>
+                    </li>
+                    <li class="career-item">
+                        <span class="career-title"><span class="year-badge">2024</span>LG틔운 X 초록우산</span>
+                        <span class="career-role">광고</span>
+                    </li>
+                    <li class="career-item">
+                        <span class="career-title"><span class="year-badge">2024</span>명지전문대학 홍보영상</span>
+                        <span class="career-role">홍보</span>
+                    </li>
+                    <li class="career-item">
+                        <span class="career-title"><span class="year-badge">2023</span>현대건설 아파트 / 엘리하이키즈</span>
+                        <span class="career-role">광고</span>
+                    </li>
+                    <li class="career-item">
+                        <span class="career-title"><span class="year-badge">2023</span>삼성전자 케어플러스 / 한샘몰</span>
+                        <span class="career-role">광고/모델</span>
+                    </li>
+                     </ul>
+            </div>
+
+            <div class="bottom-info">
+                <div style="font-size:12px; font-weight:700; color:#555; margin-bottom:8px;">SPECIALTY</div>
+                <div class="skill-tags">
+                    <span class="tag">#축구</span>
+                    <span class="tag">#수영</span>
+                    <span class="tag">#댄스</span>
+                    <span class="tag">#피아노</span>
+                </div>
+
+                <div style="width:100%; height:1px; background:#ddd; margin:15px 0;"></div>
+
+                <div class="contact-info">
+                    <div class="contact-row">
+                        <i class="fas fa-map-marker-alt"></i> 경기도 용인 (자차 이동 가능)
+                    </div>
+                    <div class="contact-row">
+                        <i class="fas fa-phone-alt"></i> 010-5542-0303
+                    </div>
+                    <div class="contact-row">
+                        <i class="fab fa-instagram"></i> www.instagram.com/kjandjy
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
